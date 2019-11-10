@@ -171,8 +171,21 @@ document.addEventListener("DOMContentLoaded",() => {
         }
     }
     
+<<<<<<< HEAD
     // let avoidLetters = "aAeEiIoOuU"
 
+=======
+    let avoidLetters = "aAeEiIoOuU"
+    
+    const addingy = () => {
+        if(document.querySelector("#myCheck").checked === true){
+            avoidLetters+= "yY"
+    }else{
+        avoidLetters ="aAeEiIoOuU"
+    }
+    console.log(avoidLetters)
+}
+>>>>>>> 4dc197e8f115ad1739e460dc2de3e636452af6e6
     const disemvowel = () => {
         let input = document.querySelector("#takeVowels");
         let checkbox = document.querySelector("#mycheck")
@@ -189,9 +202,8 @@ document.addEventListener("DOMContentLoaded",() => {
                 output = output + char
             }
         }
-        console.log(output) 
+        alert(output) 
+        document.querySelector("#checkResult").innerHTML= output
 
     }
-    const disemvowely = () => {
-        avoidLetters+= "yY"
-    }
+  
