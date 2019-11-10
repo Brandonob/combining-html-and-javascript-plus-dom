@@ -171,12 +171,18 @@ document.addEventListener("DOMContentLoaded",() => {
         }
     }
     
-    let avoidLetters = "aAeEiIoOuU"
+    // let avoidLetters = "aAeEiIoOuU"
 
     const disemvowel = () => {
         let input = document.querySelector("#takeVowels");
+        let checkbox = document.querySelector("#mycheck")
         let string = input.value;
         let output = ""
+        let avoidLetters = "aAeEiIoOuU"
+
+        if(checkbox.checked === true){
+            avoidLetters += "yY"
+        }
 
         for(let char of string) {
             if(!avoidLetters.includes(char)){
